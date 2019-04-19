@@ -60,7 +60,7 @@ function loadAccountKit()
 AccountKit.login('PHONE', {},
     function (response) {
         if (response.status === "PARTIALLY_AUTHENTICATED") {
-            window.postMessage(JSON.stringify({loggedIn:response}))
+            window.postMessage(JSON.stringify({loggedIn:response.code}))
         }
         else if (response.status === "NOT_AUTHENTICATED") {
             // handle authentication failure
