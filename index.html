@@ -7,6 +7,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 <title>Accountkit</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+var MY_SELECTOR = "._5-3k" // Could be any selector
+
+var observer = new MutationObserver(function(mutations){
+  for (var i=0; i < mutations.length; i++){
+    for (var j=0; j < mutations[i].addedNodes.length; j++){
+      // We're iterating through _all_ the elements as the parser parses them,
+      // deciding if they're the one we're looking for.
+      if (mutations[i].addedNodes[j].matches(MY_SELECTOR)){
+        alert("My Element Is Ready!");
+
+        // We found our element, we're done:
+        observer.disconnect();
+      };
+    }
+  }
+});
+
+observer.observe(document.documentElement, {
+  childList: true,
+  subtree: true
+});
+                                                     
+</script>
 </head>
 <body>
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
@@ -75,11 +99,6 @@ AccountKit.login('PHONE', {},
  
   setTimeout(loadAccountKit,1000)
   
-</script>
-<script>
-$(window).bind("load", function() {
-   console.log("fap");
-});
 </script>
 </body>
 </html>
