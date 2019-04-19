@@ -1,4 +1,6 @@
-
+$(window).load(function(){
+    // do something 
+});
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +8,15 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 <title>Accountkit</title>
-<style>
-._5-3k    {visibility: hidden !important;}
-</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+<script>
+$(window).load(function(){
+    console.log("hety"); 
+});  
+</script>
 <script>
   // awaitPostMessage() This is needed as window.postMessage is not working gracefully for android
 function awaitPostMessage() {
