@@ -6,24 +6,6 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 <title>Accountkit</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-
-var observer = new MutationObserver(function(mutations, observer) {
-    // fired when a mutation occurs
-    $('._5-3k').hide();
-    // ...
-});
-
-// define what element should be observed by the observer
-// and what types of mutations trigger the callback
-observer.observe(document, {
-  subtree: true,
-  attributes: true
-  //...
-});                                                     
-</script>
 </head>
 <body>
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
