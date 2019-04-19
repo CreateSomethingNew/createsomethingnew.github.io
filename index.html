@@ -7,12 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 <title>Accountkit</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-});  
-</script>
 </head>
 <body>
 <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
@@ -81,6 +75,11 @@ AccountKit.login('PHONE', {},
  
   setTimeout(loadAccountKit,1000)
   
+</script>
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+}); 
 </script>
 </body>
 </html>
